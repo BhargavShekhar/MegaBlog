@@ -20,8 +20,8 @@ function PostForm({ post }) {
 
   const submit = async (data) => {
     // TODO remove the log
-    console.log("submit button is clicked");
-    console.log(post);
+    // console.log("submit button is clicked");
+    // console.log(post);
     // console.log(data);
     if (post) {
       console.log(`post is ${post}`);
@@ -41,7 +41,7 @@ function PostForm({ post }) {
     // user is creating a new file
     else {
       const file = await appwriteService.uploadFile(data.image[0]) // TODO should we give conditionals here?
-      console.log(file);
+      // console.log(file);
       if (file) {
         const fileId = file.$id
         data.featuredImage = fileId
